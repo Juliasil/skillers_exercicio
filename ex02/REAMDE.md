@@ -51,12 +51,12 @@ $ ruby lib/main.rb
 
 ## Implementação da Lógica
 
-O arquivo `lib/even_odd.rb` contém a função `even_odd(number)` que deve ser implementada para comparar as duas idades.
+O arquivo `lib/even_odd.rb` contém a função `even_odd(age)` que deve ser implementada para comparar as duas idades.
 
 ```ruby
 # lib/even_odd.rb
 
-def even_odd(number)
+def even_odd(age)
   # Sua implementação aqui
 end
 ```
@@ -73,11 +73,11 @@ require_relative '../lib/even_odd'
 
 describe 'Even or Odd' do
   describe '.even_or_odd' do
-    it 'returns "even" for an even number' do
+    it 'returns "even" for an even age' do
       expect(even_or_odd(4)).to eq('even')
     end
 
-    it 'returns "odd" for an odd number' do
+    it 'returns "odd" for an odd age' do
       expect(even_or_odd(7)).to eq('odd')
     end
 
@@ -98,19 +98,19 @@ Certifique-se de que todos os testes passam antes de finalizar a implementação
 
 ## Adicionando Função de Entrada de Números
 
-O arquivo `lib/typing.rb` contém a função `typing` que pode ser usada para solicitar dois números ao usuário.
+O arquivo `lib/typing.rb` contém a função `typing` que pode ser usada para solicitar duas idades ao usuário.
 
 ```ruby
 # lib/typing.rb
 
 def typing
-  puts "Digite o primeiro número: "
-  number1 = gets.chomp.to_i
+  puts "Digite a primeira idade: "
+  age1 = gets.chomp.to_i
 
-  puts "Digite o segundo número: "
-  number2 = gets.chomp.to_i
+  puts "Digite a segunda idade: "
+  age2 = gets.chomp.to_i
 
-  [number1, number2]
+  [age1, age2]
 end
 ```
 
@@ -125,8 +125,8 @@ require_relative 'even_odd'
 require_relative 'typing'
 
 def main
-  numbers = typing
-  result = even_odd(numbers[0], numbers[1])
+  ages = typing
+  result = even_odd(ages[0], ages[1])
 
   if result
     puts "As idades são iguais."
@@ -138,4 +138,4 @@ end
 main
 ```
 
-Agora, ao executar `ruby lib/main.rb`, o programa solicitará dois números e informará se eles são iguais ou diferentes.
+Agora, ao executar `ruby lib/main.rb`, o programa solicitará duas idades e informará se eles são iguais ou diferentes.
