@@ -1,10 +1,15 @@
 require_relative 'compare_strings'
 require_relative 'typing'
 
+puts "Seja bem vindo!"
+
 def main
   str1 = typing
   str2 = typing
-  compare_strings(str1, str2)
+  result = compare_strings(str1, str2)
+  puts result
+  puts "Obrigado por participar da comparação de strings! Esperamos vê-lo 
+  novamente em breve."
 end
 
 main

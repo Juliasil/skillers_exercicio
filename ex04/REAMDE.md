@@ -46,16 +46,16 @@ ex04/
    ruby lib/main.rb
    ```
 
-   O programa solicitará que você digite uma idade. Insira a idade e pressione Enter para obter a categoria correspondente.
+   O programa solicitará que você digite uma string. Insira a string e pressione Enter para obter a categoria correspondente.
 
 ## Implementação da Lógica
 
-O arquivo `lib/compare_strings.rb` contém a função `compare_strings(age)` que deve ser implementada para determinar a categoria com base na idade.
+O arquivo `lib/compare_strings.rb` contém a função `compare_strings(str1, str2)` que deve ser implementada para determinar a categoria com base na idade.
 
 ```ruby
 # lib/compare_strings.rb
 
-def compare_strings(age)
+def compare_strings(str1, str2)
   # Sua implementação aqui
 end
 ```
