@@ -64,7 +64,7 @@ end
 
 ## Testes
 
-Os testes para a função `check_number` estão definidos no arquivo `spec/approval_spec.rb`. Certifique-se de implementar a lógica correta para que os testes passem com sucesso.
+Os testes para a função `check_number` estão definidos no arquivo `even_and_multiple_of_five`. Certifique-se de implementar a lógica correta para que os testes passem com sucesso.
 
 ```ruby
 # spec/even_and_multiple_of_five_spec.rb
