@@ -10,7 +10,6 @@ describe 'Even or Odd' do
     it 'returns "odd" for an odd number' do
       expect(even_or_odd(7)).to eq('odd')
     end
-
     it 'returns "even" for zero' do
       expect(even_or_odd(0)).to eq('even')
     end

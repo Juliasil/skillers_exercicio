@@ -6,7 +6,7 @@ def main
   result = even_or_odd(number)
   result = "par" if result == "even"
   result = "ìmpar" if result == "odd"
-  puts "O #{number} é #{result}"
+  puts " O #{number} é #{result} "
 end
 
 main
