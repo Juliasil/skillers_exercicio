@@ -2,11 +2,11 @@
 
 ## Sobre o Projeto
 
-Este projeto é parte do curso Skill.dev e tem como objetivo desenvolver um programa em Ruby que solicita ao usuário duas idades, verifica se são iguais e imprime uma mensagem correspondente. O exercício consiste em:
+Este projeto é parte do curso Skill.dev e tem como objetivo desenvolver um programa em Ruby que solicita ao usuário um número, verifica se são par ou impar e imprime uma mensagem correspondente. O exercício consiste em:
 
-- Solicitar ao usuário duas idades.
-- Verificar se as idades são iguais.
-- Imprimir uma mensagem correspondente.
+- Solicitar um número para usuário.
+- Analisar o número e verificar se é impar ou par.
+- Imprimir uma mensagem correspondente. even(par) ou odd(ímpar)
 
 ## Estrutura do Projeto
 
@@ -47,16 +47,16 @@ $ bundle install
 $ ruby lib/main.rb
 ```
 
-   O programa solicitará que você digite duas idades. Insira as idades e pressione Enter para obter a mensagem correspondente.
+   O programa solicitará que você digite um número. Insira o número e pressione Enter para obter a mensagem correspondente.
 
 ## Implementação da Lógica
 
-O arquivo `lib/even_odd.rb` contém a função `even_odd(age)` que deve ser implementada para comparar as duas idades.
+O arquivo `lib/even_odd.rb` contém a função `even_odd(number)` que deve ser implementada para mostrar ser é impar ou par.
 
 ```ruby
 # lib/even_odd.rb
 
-def even_odd(age)
+def even_odd(number)
   # Sua implementação aqui
 end
 ```
@@ -73,11 +73,11 @@ require_relative '../lib/even_odd'
 
 describe 'Even or Odd' do
   describe '.even_or_odd' do
-    it 'returns "even" for an even age' do
+    it 'returns "even" for an even number' do
       expect(even_or_odd(4)).to eq('even')
     end
 
-    it 'returns "odd" for an odd age' do
+    it 'returns "odd" for an odd number' do
       expect(even_or_odd(7)).to eq('odd')
     end
 
@@ -96,21 +96,18 @@ rspec spec
 
 Certifique-se de que todos os testes passam antes de finalizar a implementação.
 
-## Adicionando Função de Entrada de Números
+## Adicionando Função de Entrada de Número
 
-O arquivo `lib/typing.rb` contém a função `typing` que pode ser usada para solicitar duas idades ao usuário.
+O arquivo `lib/typing.rb` contém a função `typing` que pode ser usada para solicitar um número ao usuário.
 
 ```ruby
 # lib/typing.rb
 
 def typing
-  puts "Digite a primeira idade: "
-  age1 = gets.chomp.to_i
+  puts "Digite o número: "
+  number = gets.chomp.to_i
 
-  puts "Digite a segunda idade: "
-  age2 = gets.chomp.to_i
-
-  [age1, age2]
+ number
 end
 ```
 
@@ -125,17 +122,14 @@ require_relative 'even_odd'
 require_relative 'typing'
 
 def main
-  ages = typing
-  result = even_odd(ages[0], ages[1])
+  numbers = typing
+  result = even_odd(number)
 
-  if result
-    puts "As idades são iguais."
-  else
-    puts "As idades são diferentes."
-  end
+  puts "O #{number} é #{result}
+
 end
 
 main
 ```
 
-Agora, ao executar `ruby lib/main.rb`, o programa solicitará duas idades e informará se eles são iguais ou diferentes.
+Agora, ao executar `ruby lib/main.rb`, o programa solicitará um número e informará se ele é impar ou par.

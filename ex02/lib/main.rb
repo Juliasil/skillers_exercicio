@@ -2,14 +2,11 @@ require_relative 'even_odd'
 require_relative 'typing'
 
 def main
-  ages = typing
-  result = even_odd(ages)
-
-  if result
-    puts "As idades são iguais."
-  else
-    puts "As idades são diferentes."
-  end
+  number = typing
+  result = even_or_odd(number)
+  result = "par" if result == "even"
+  result = "ìmpar" if result == "odd"
+  puts "O #{number} é #{result}"
 end
 
 main
