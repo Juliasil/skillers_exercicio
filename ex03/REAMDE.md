@@ -2,7 +2,7 @@
 
 ## Sobre o Projeto
 
-Este projeto é parte do curso skill.dev e tem como objetivo desenvolver um programa interativo em Ruby para verificar se o número é positivo ou negativo. O exercício consiste em:
+Este projeto é parte do curso skill.dev e tem como objetivo desenvolver um programa interativo em Ruby que solicita ao usuário um número e determina se é positivo ou negativo. O exercício consiste em:
 
 Solicite um número ao usuário.
 - Se number é positivo imprima 'Positivo'
@@ -47,7 +47,7 @@ $ bundle install
 $ ruby lib/main.rb
 ```
 
-   O programa solicitará que você insira um número.Após inserir o número desejado,pressione Enter para obter a correspondência se ele é positivo ou negativo.
+   O programa solicitará que você insira número.Após inserir um número desejado,pressione Enter para obter a se é positivo ou negativo.
 
 ## Implementação da Lógica
 
@@ -78,6 +78,11 @@ RSpec.describe '#positive_number_checker' do
       expect(result).to eq('Positivo')
     end
 
+    it 'returns "Positivo"' do
+      result = positive_number_checker(2353252)
+      expect(result).to eq('Positivo')
+    end
+
     it 'returns "Positivo" for decimal numbers' do
       result = positive_number_checker(3.14)
       expect(result).to eq('Positivo')
@@ -99,7 +104,7 @@ RSpec.describe '#positive_number_checker' do
   context 'when the number is zero' do
     it 'returns "Negativo" for zero' do
       result = positive_number_checker(0)
-      expect(result).to eq('Negativo')
+      expect(result).to eq('Neutro')
     end
   end
 end
