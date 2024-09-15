@@ -1,9 +1,7 @@
 def positive_number_checker(number)
-  if number.positive?
-    return "Positivo" 
-  elsif number.negative?
-    return "Negativo"
-  elsif number.zero?
-    return "Negativo"
-  end
+  return "Positivo" if number > 0
+
+  return "Negativo" if number < 0
+
+  "Neutro"
 end

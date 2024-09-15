@@ -1,11 +1,15 @@
 def greatest_of_three(number1, number2, number3)
-  maior = number1
-  if number2 > maior
-    maior = number2
-  end
-  if number3 > maior
-    maior = number3 
-  end
-  return maior
-end
+  max_value = 0
 
+  if number1 >= number2
+    max_value = number1
+  else
+    max_value = number2
+  end
+
+  if max_value >= number3
+    return max_value
+  else
+    return number3
+  end
+end
